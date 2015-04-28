@@ -61,7 +61,9 @@ T90 Count BBlocks =							1.47200
 T100 =										1.60000
 ```
 **Example Plots**
-Resulting Counts Light Curve<br>
+Count Light Curve Plot: [LightCurve]<br>
+Model Diagnostics Plot: [ModelDiagnostics]<br>
+
 [LightCurve]: https://github.com/dankocevski/GRBModel/blob/master/LightCurve.png "Count Light Curve Plot"
 [ModelDiagnostics]: https://github.com/dankocevski/GRBModel/blob/master/ModelDiagnostics.png "Model Diagnostics Plot"
 
