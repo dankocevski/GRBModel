@@ -20,7 +20,7 @@ Compile the code in IDL
 
 Model the triggering pulse of GRB 130427A described in <a href="http://adsabs.harvard.edu/abs/2014Sci...343...51P">Preece et al. (2013)</a>
 ```IDL
-	GRBModel, 2500*(1+0.3399), 3.20d57, -0.9, -2.66, 0.2, time, photon_flux, /plot, redshift=0.3399, /showbblocks, POISSON_Median=1000, /GBM, xrange=[-1,10], timerange=[-1,10], timeres=0.064, countspectrumnorm = 18, dindex=3
+	GRBModel, 2500*(1+0.3399), 3.20d57, -0.9, -2.66, 0.2, time, CountRate, photon_flux, /plot, redshift=0.3399, /showbblocks, POISSON_Median=1000, /GBM, xrange=[-1,10], timerange=[-1,10], timeres=0.064, countspectrumnorm = 18, dindex=3
 ```
 
 **Example Results**
@@ -77,6 +77,7 @@ Model Diagnostics Plot: [ModelDiagnostics.png]<br>
 
 **Optional Arguments**<br>
 * Time 										- An array containing the time axis data<br>
+* CountRate 								- An array containing the count rate data
 * PhotonFlux_Detector						- An array containing the photon flux light curve in the detector's band bass<br>
 * EnergyFluence_Estimated 					- The observer frame energy fluence, estimated using the observed duration<br>
 * EnergyFluence_kCorrected_Estimated		- The observer frame energy fluence, estimated using the observed duration, but k-corrected to a standard band bass<br>
