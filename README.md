@@ -2,7 +2,7 @@
 
 **Introduction**
 
-GRBModel is an IDL routine that generates synthetic fast rise exponential decay (FRED) gamma-ray burst light curve pulses.  The code uses the empirical hardness-intensity (Golenetskii 1993) and hardness-fluence (Liang & Kargatis 1996) correlations to model the evolution of a user-supplied GRB spectrum, which is folded through a detector repsonse to produce a count light curve.  The detector responses from the Fermi Gamma-ray Burst Monitor (GBM) and Burst and Transient Telescope (BATSE) are currently supported.  
+GRBModel is an IDL routine that generates synthetic fast rise exponential decay (FRED) gamma-ray burst light curve pulses.  The code uses the empirical hardness-intensity (<a href="http://adsabs.harvard.edu/abs/1983Natur.306..451G">Golenetskii 1983</a>) and hardness-fluence (<a href="http://adsabs.harvard.edu/abs/1996Natur.381...49L">Liang & Kargatis 1996</a>) correlations to model the evolution of a user-supplied GRB spectrum, which is folded through a detector repsonse to produce a count light curve.  The detector responses from the Fermi Gamma-ray Burst Monitor (GBM) and Burst and Transient Telescope (BATSE) are currently supported.  
 
 GRBModel.pro has served as the basis for the population synthesis code used in the following papers:
 
@@ -18,7 +18,7 @@ Compile the code in IDL
     .compile GRBModel
 ```
 
-Model the triggering pulse from GRB 130427A (from Preece et al. 2013)
+Model the triggering pulse of GRB 130427A described in <a href="http://adsabs.harvard.edu/abs/2014Sci...343...51P">Preece et al. (2013)</a>
 ```IDL
 	GRBModel, 2500*(1+0.3399), 3.20d57, -0.9, -2.66, 0.2, time, photon_flux, /plot, redshift=0.3399, /showbblocks, POISSON_Median=1000, /GBM, xrange=[-1,10], timerange=[-1,10], timeres=0.064, countspectrumnorm = 18, dindex=3
 ```
@@ -26,39 +26,39 @@ Model the triggering pulse from GRB 130427A (from Preece et al. 2013)
 **Example Results**
 ```IDL
 Redshift =									0.3399
-Tmax_Observer =								0.400000
-Epk0_Source =								5000
-Epk0_Observer =								2500
+Tmax_Observer =								0.267980
+Epk0_Source =								3349.75
+Epk0_Observer =								2500.00
 Epk_Observer =								NaN
 Alpha =										-0.900000
 Beta =										-2.66000
-Initial Photon Flux =						0.60670793
-Peak Photon Flux =							2.3075163
-Peak Photon Flux (50-300 keV) =				0.88648505
-Peak Energy Flux =							7.5397983e-07
-Peak Energy Flux (50-300 keV) =				2.0016942e-07
+Initial Photon Flux =						8.4057639
+Peak Photon Flux =							46.170764
+Peak Photon Flux (50-300 keV) =				17.611770
+Peak Energy Flux =							1.4992391e-05
+Peak Energy Flux (50-300 keV) =				3.9771904e-06
 Peak Photon Luminosity (Input) =			3.2000000e+57
-Peak Photon Luminosity =					1.2170687e+58
-Peak Energy Luminosity =					3.9767660e+51
-Energy Fluence True (Bolometric) =			7.1733277e-06
-Energy Fluence True (k-Corrected) =			3.0758651e-06
+Peak Photon Luminosity =					1.7576802e+58
+Peak Energy Luminosity =					5.7074707e+51
+Energy Fluence True (Bolometric) =			4.5280511e-05
+Energy Fluence True (k-Corrected) =			3.0258687e-05
 Energy Fluence Estimated (k-Corrected) =	0.0000000
 Energy Fluence Estimated =					0.0000000
-Eiso True (Bolometric) 						1.8917380e+52
+Eiso True (Bolometric) 						1.2865057e+52
 Eiso Estimated (k-Corrected) =				0.0000000
 HR31 Photons =								-NaN
-HR31 Counts =								2.3197714
-HR41 Counts =								2.8740169
+HR31 Counts =								2.1540972
+HR41 Counts =								2.2167317
 Lag CCF31 =									NaN
-Noise STDEV =								32.387506
-Peak Counts =								1218.4019
-Peak Counts (50-300 keV) =					567.89948
-S/N ratio =									7.0470725
-S/N ratio (50-300 keV) =					6.7622964
-T90 Photon =								2.04800
-T90 Count =									-9.53600
-T90 Count BBlocks =							9.79200
-T100 =										1.02400
+Noise STDEV =								30.771758
+Peak Counts =								5114.3130
+Peak Counts (50-300 keV) =					2825.0149
+S/N ratio =									133.06587
+S/N ratio (50-300 keV) =					121.04953
+T90 Photon =								1.47200
+T90 Count =									1.53600
+T90 Count BBlocks =							1.47200
+T100 =										1.60000
 ```
 
 **Reference Guide**<br>
