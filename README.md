@@ -4,17 +4,22 @@ GRBModel is an IDL routine that generates synthetic fast rise exponential decay 
 
 GRBModel.pro has served as the basis for the population modeling code used in the following papers:
 
-Kocevski & Petrosian 2013 - On the Lack of Time Dilation Signatures in Gamma-Ray Burst Light Curves
-Kocevski 2012 - On the Origin of High-energy Correlations in Gamma-Ray Bursts
+[Kocevski & Petrosian 2013]: http://adsabs.harvard.edu/abs/2013ApJ...765..116K - On the Lack of Time Dilation Signatures in Gamma-Ray Burst Light Curves
+[Kocevski 2012]: http://adsabs.harvard.edu/abs/2012ApJ...747..146K - On the Origin of High-energy Correlations in Gamma-Ray Bursts
 
-Please refer to Kocevski (2012) for a more comprehensive description of the GRBModel code.
+Please refer to [Kocevski (2012)]: http://adsabs.harvard.edu/abs/2012ApJ...747..146K for a more comprehensive description of the GRBModel code.
 
 **Required Arguments**
-Epk0_Source								- The initial source frame Epeak (Band et al. 1993) 
+Epk0_Source								- The initial source frame Epeak (Band et al. 1993)
+
 Luminosity0								- The burst luminosity in photons/cm2/s
+
 alpha									- The low energy power-law slope of the Band function
+
 beta									- The high energy power-law slope of the Band function
+
 Tmax_Source								- The time of the pulse peak
+
 
 **Optional Arguments**
 Time 									- An array containing the time axis data
