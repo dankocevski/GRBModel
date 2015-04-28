@@ -1,5 +1,7 @@
 # GRBModel
 
+**Introduction**
+
 GRBModel is an IDL routine that generates synthetic fast rise exponential decay (FRED) GRB light curve pulses.  The code uses the empirical hardness-intensity (Golenetskii 1993) and hardness-fluence (Liang & Kargatis 1996) correlations to model the evolution of a user-supplied GRB spectrum, which is folded through a detector repsonse to produce a count light curve.  The detector responses from the Fermi Gamma-ray Burst Monitor (GBM) and Burst and Transient Telescope (BATSE) instruments are currently supported.  
 
 GRBModel.pro has served as the basis for the population modeling code used in the following papers:
@@ -9,25 +11,25 @@ GRBModel.pro has served as the basis for the population modeling code used in th
 
 Please refer to [Kocevski (2012)]: http://adsabs.harvard.edu/abs/2012ApJ...747..146K for a more comprehensive description of the GRBModel code.
 
-**Required Arguments**
-Epk0_Source								- The initial source frame Epeak (Band et al. 1993)<br>
-Luminosity0								- The burst luminosity in photons/cm2/s<br>
-alpha									- The low energy power-law slope of the Band function
-beta									- The high energy power-law slope of the Band function
-Tmax_Source								- The time of the pulse peak
+**Required Arguments**<br>
+* Epk0_Source								- The initial source frame Epeak (Band et al. 1993)<br>
+* Luminosity0								- The burst luminosity in photons/cm2/s<br>
+* alpha									- The low energy power-law slope of the Band function<br>
+* beta									- The high energy power-law slope of the Band function<br>
+* Tmax_Source								- The time of the pulse peak<br>
 
-**Optional Arguments**
-Time 									- An array containing the time axis data
-PhotonFlux_Detector						- An array containing the photon flux light curve in the detector's band bass
-EnergyFluence_Estimated 				- The observer frame energy fluence, estimated using the observed duration
-EnergyFluence_kCorrected_Estimated		- The observer frame energy fluence, estimated using the observed duration, but k-corrected to a standard band bass
-Epk_Observer_Int						- The initial observer frame Epeak (Band et al. 1993) 	
-Eiso_Bolometric_True					- The true bolometric isotropic equivelent energy
-Eiso_kCorrected_Estimated				- The isotropic equivelent energy estimated using the observed duration * (1+z) and a k-correction to a standard band bass
-Epk 									- An array containing the time evolution of Epk in the observer frame
-Fpk 									- An array containing the time evolution of the peak flux
-t90_count								- The T90 in count space
-t90_photon								- The T90 in photon space
+**Optional Arguments**<br>
+Time 									- An array containing the time axis data<br>
+PhotonFlux_Detector						- An array containing the photon flux light curve in the detector's band bass<br>
+EnergyFluence_Estimated 				- The observer frame energy fluence, estimated using the observed duration<br>
+EnergyFluence_kCorrected_Estimated		- The observer frame energy fluence, estimated using the observed duration, but k-corrected to a standard band bass<br>
+Epk_Observer_Int						- The initial observer frame Epeak (Band et al. 1993)<br>
+Eiso_Bolometric_True					- The true bolometric isotropic equivelent energy<br>
+Eiso_kCorrected_Estimated				- The isotropic equivelent energy estimated using the observed duration * (1+z) and a k-correction to a standard band bass<br>
+Epk 									- An array containing the time evolution of Epk in the observer frame<br>
+Fpk 									- An array containing the time evolution of the peak flux<br>
+t90_count								- The T90 in count space<br>
+t90_photon								- The T90 in photon space<br>
 t100									- The T100 duration as determined from Bayesian blocks
 HR31_Photon								- The hardness ratio between channel 3 and channel 1 in photon space
 HR31_Count								- The hardness ratio between channel 3 and channel 1 in count space
@@ -76,7 +78,7 @@ yrange_nufnu=yrange_nufnu 				- The y range of the nuFnu plot
 **Required Libraryies:
 Astrolib - http://idlastro.gsfc.nasa.gov
 
-**Usage Examples: 
+**Usage Examples##
 
 Compile the code in IDL
 ```IDL
@@ -89,7 +91,7 @@ Model the triggering pulse from GRB 130427A (from Preece et al. 2013)
 	GRBModel, 2500*(1+z), 3.20d57, -0.9, -2.66, 0.2, time, photon_flux, /plot, redshift=z, /showbblocks, POISSON_Median=1000, /GBM, xrange=[-1,10], timerange=[-1,10], timeres=0.064, countspectrumnorm = 18, dindex=3
 ```
 
-**Example Results:
+**Example Results**
 ```IDL
 Redshift =									1
 Tmax_Observer =								0.400000
