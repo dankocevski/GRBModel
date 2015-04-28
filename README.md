@@ -14,71 +14,71 @@ Please refer to [Kocevski (2012)]: http://adsabs.harvard.edu/abs/2012ApJ...747..
 **Required Arguments**<br>
 * Epk0_Source								- The initial source frame Epeak (Band et al. 1993)<br>
 * Luminosity0								- The burst luminosity in photons/cm2/s<br>
-* alpha									- The low energy power-law slope of the Band function<br>
-* beta									- The high energy power-law slope of the Band function<br>
+* alpha										- The low energy power-law slope of the Band function<br>
+* beta										- The high energy power-law slope of the Band function<br>
 * Tmax_Source								- The time of the pulse peak<br>
 
 **Optional Arguments**<br>
-Time 									- An array containing the time axis data<br>
-PhotonFlux_Detector						- An array containing the photon flux light curve in the detector's band bass<br>
-EnergyFluence_Estimated 				- The observer frame energy fluence, estimated using the observed duration<br>
-EnergyFluence_kCorrected_Estimated		- The observer frame energy fluence, estimated using the observed duration, but k-corrected to a standard band bass<br>
-Epk_Observer_Int						- The initial observer frame Epeak (Band et al. 1993)<br>
-Eiso_Bolometric_True					- The true bolometric isotropic equivelent energy<br>
-Eiso_kCorrected_Estimated				- The isotropic equivelent energy estimated using the observed duration * (1+z) and a k-correction to a standard band bass<br>
-Epk 									- An array containing the time evolution of Epk in the observer frame<br>
-Fpk 									- An array containing the time evolution of the peak flux<br>
-t90_count								- The T90 in count space<br>
-t90_photon								- The T90 in photon space<br>
-t100									- The T100 duration as determined from Bayesian blocks
-HR31_Photon								- The hardness ratio between channel 3 and channel 1 in photon space
-HR31_Count								- The hardness ratio between channel 3 and channel 1 in count space
-HR41_Count								- The hardness ratio between channel 4 and channel 1 in count space
-lag31									- The lag between channel 3 and channel 1
-flux 									- An array containing the time evolution of flux in the observer frame
-fwhm									- The full-width half-max of the pulse
-SNRatio 								- The signal to noise of the pulse
-SNRatio_Trigger							- The signal to noise of the pulse in the band pass that can trigger the instrument
+* Time 										- An array containing the time axis data<br>
+* PhotonFlux_Detector						- An array containing the photon flux light curve in the detector's band bass<br>
+* EnergyFluence_Estimated 					- The observer frame energy fluence, estimated using the observed duration<br>
+* EnergyFluence_kCorrected_Estimated		- The observer frame energy fluence, estimated using the observed duration, but k-corrected to a standard band bass<br>
+* Epk_Observer_Int							- The initial observer frame Epeak (Band et al. 1993)<br>
+* Eiso_Bolometric_True						- The true bolometric isotropic equivelent energy<br>
+* Eiso_kCorrected_Estimated					- The isotropic equivelent energy estimated using the observed duration * (1+z) and a k-correction to a standard band bass<br>
+* Epk 										- An array containing the time evolution of Epk in the observer frame<br>
+* Fpk 										- An array containing the time evolution of the peak flux<br>
+* t90_count									- The T90 in count space<br>
+* t90_photon								- The T90 in photon space<br>
+* t100										- The T100 duration as determined from Bayesian blocks<br>
+* HR31_Photon								- The hardness ratio between channel 3 and channel 1 in photon space<br>
+* HR31_Count								- The hardness ratio between channel 3 and channel 1 in count space<br>
+* HR41_Count								- The hardness ratio between channel 4 and channel 1 in count space<br>
+* lag31										- The lag between channel 3 and channel 1<br>
+* flux 										- An array containing the time evolution of flux in the observer frame<br>
+* fwhm										- The full-width half-max of the pulse<br>
+* SNRatio 									- The signal to noise of the pulse<br>
+* SNRatio_Trigger							- The signal to noise of the pulse in the band pass that can trigger the instrument<br>
 
 **Required Keywords**
-redshift=value 							- The burst redshift
+redshift=value 								- The burst redshift<br>
 
 **Optional Keywords**
-rindex=value 							- The r index from the KRL function (kocevski et al. 2005)
-dindex=value 							- The d index from the KRL function (kocevski et al. 2005)
-POISSON_Median=value					- The background count value
-CountsMatrix=CountsMatrix, 
-CountsSpectrumCube_Observer=...			- The time-resolved counts spectrum in the observer frame
-PhotonSpectrumCube_Observer=...			- The time-resolved photon spectrum in the observer frame
-CountRate_Channel1=CountRate_Channel1	- The count light curve for channel 1 
-CountRate_Channel2=CountRate_Channel2	- The count light curve for channel 2
-CountRate_Channel3=CountRate_Channel3	- The count light curve for channel 3
-CountRate_Channel4=CountRate_Channel4	- The count light curve for channel 4
-JobNumber=JobNumber						- A user specified job number
-Results=Results 						- A structure to house a range of light curve properties
-timerange=timerange						- The time range to simulate
-timeres=timeres 						- The resolution of the simulation
-CountSpectrumNorm=CountSpectrumNorm 	- Renormalizing the count spectrum
-yrange_nufnu=yrange_nufnu 				- The y range of the nuFnu plot
-/plot 									- Plot the results
-/rebin									- Rebin the data to 10 second bins
-/ps 									- Save the plot as a postscript
-/showbblocks 							- Show the Bayesian block reconstruction
-/swift 									- Use the Swift energy range [10,125]
-/batse 									- Use the BATSE energy range [20, 1800]
-/GBM 									- Use the GBM NaI energy range [8,1000]
-/save3d									- Save a plot of the 3D model showing the temporal and spectral evolution 
-/MakeFakeBFITS=MakeFakeBFITS
-/MakeFakePHA=MakeFakePHA
-/lag 									- Calculate the pulse lag
-/ShowLagPlot 							- Show the pulse lag calculation
-/XSPEC=XSPEC
-/CleanUp=CleanUp
+* rindex=value 								- The r index from the KRL function (kocevski et al. 2005)<br>
+* dindex=value 								- The d index from the KRL function (kocevski et al. 2005)<br>
+* POISSON_Median=value						- The background count value<br>
+* CountsMatrix=CountsMatrix 				- The time evolution of the observed counts
+* CountsSpectrumCube_Observer=...			- The time-resolved counts spectrum in the observer frame<br>
+* PhotonSpectrumCube_Observer=...			- The time-resolved photon spectrum in the observer frame<br>
+* CountRate_Channel1=CountRate_Channel1		- The count light curve for channel 1<br>
+* CountRate_Channel2=CountRate_Channel2		- The count light curve for channel 2<br>
+* CountRate_Channel3=CountRate_Channel3		- The count light curve for channel 3<br>
+* CountRate_Channel4=CountRate_Channel4		- The count light curve for channel 4<br>
+* JobNumber=JobNumber						- A user specified job number<br>
+* Results=Results 							- A structure to house a range of light curve properties<br>
+* timerange=timerange						- The time range to simulate<br>
+* timeres=timeres 							- The resolution of the simulation<br>
+* CountSpectrumNorm=CountSpectrumNorm 		- Renormalizing the count spectrum<br>
+* yrange_nufnu=yrange_nufnu 				- The y range of the nuFnu plot<br>
+* /plot 									- Plot the results<br>
+* /rebin									- Rebin the data to 10 second bins<br>
+* /ps 										- Save the plot as a postscript<br>
+* /showbblocks 								- Show the Bayesian block reconstruction<br>
+* /swift 									- Use the Swift energy range [10,125]<br>
+* /batse 									- Use the BATSE energy range [20, 1800]<br>
+* /GBM 										- Use the GBM NaI energy range [8,1000]<br>
+* /save3d									- Save a plot of the 3D model showing the temporal and spectral evolution<br>
+* /MakeFakeBFITS=MakeFakeBFITS
+* /MakeFakePHA=MakeFakePHA
+* /lag 										- Calculate the pulse lag<br>
+* /ShowLagPlot 								- Show the pulse lag calculation<br>
+* /XSPEC=XSPEC
+* /CleanUp=CleanUp
 
-**Required Libraryies:
+**Required Libraryies**
 Astrolib - http://idlastro.gsfc.nasa.gov
 
-**Usage Examples##
+**Usage Examples**U
 
 Compile the code in IDL
 ```IDL
