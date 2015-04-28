@@ -40,8 +40,8 @@ Please refer to [Kocevski (2012)]: http://adsabs.harvard.edu/abs/2012ApJ...747..
 * SNRatio 									- The signal to noise of the pulse<br>
 * SNRatio_Trigger							- The signal to noise of the pulse in the band pass that can trigger the instrument<br>
 
-**Required Keywords**
-redshift=value 								- The burst redshift<br>
+**Required Keywords**<br>
+* redshift=value 								- The burst redshift<br>
 
 **Optional Keywords**
 * rindex=value 								- The r index from the KRL function (kocevski et al. 2005)<br>
@@ -68,17 +68,17 @@ redshift=value 								- The burst redshift<br>
 * /batse 									- Use the BATSE energy range [20, 1800]<br>
 * /GBM 										- Use the GBM NaI energy range [8,1000]<br>
 * /save3d									- Save a plot of the 3D model showing the temporal and spectral evolution<br>
-* /MakeFakeBFITS=MakeFakeBFITS
-* /MakeFakePHA=MakeFakePHA
+* /MakeFakeBFITS
+* /MakeFakePHA
 * /lag 										- Calculate the pulse lag<br>
 * /ShowLagPlot 								- Show the pulse lag calculation<br>
-* /XSPEC=XSPEC
-* /CleanUp=CleanUp
+* /XSPEC
+* /CleanUp
 
 **Required Libraryies**
 Astrolib - http://idlastro.gsfc.nasa.gov
 
-**Usage Examples**U
+**Usage Examples**
 
 Compile the code in IDL
 ```IDL
@@ -87,8 +87,7 @@ Compile the code in IDL
 
 Model the triggering pulse from GRB 130427A (from Preece et al. 2013)
 ```IDL
-    z = 1
-	GRBModel, 2500*(1+z), 3.20d57, -0.9, -2.66, 0.2, time, photon_flux, /plot, redshift=z, /showbblocks, POISSON_Median=1000, /GBM, xrange=[-1,10], timerange=[-1,10], timeres=0.064, countspectrumnorm = 18, dindex=3
+	GRBModel, 2500*(1+0.3399), 3.20d57, -0.9, -2.66, 0.2, time, photon_flux, /plot, redshift=z, /showbblocks, POISSON_Median=1000, /GBM, xrange=[-1,10], timerange=[-1,10], timeres=0.064, countspectrumnorm = 18, dindex=3
 ```
 
 **Example Results**
