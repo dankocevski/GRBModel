@@ -10,12 +10,11 @@ GRBModel.pro has served as the basis for the population modeling code used in th
 Please refer to [Kocevski (2012)]: http://adsabs.harvard.edu/abs/2012ApJ...747..146K for a more comprehensive description of the GRBModel code.
 
 **Required Arguments**
-Epk0_Source								- The initial source frame Epeak (Band et al. 1993)\n
-Luminosity0								- The burst luminosity in photons/cm2/s\n
-alpha									- The low energy power-law slope of the Band function\n
-beta									- The high energy power-law slope of the Band function\n
-Tmax_Source								- The time of the pulse peak\n
-
+Epk0_Source								- The initial source frame Epeak (Band et al. 1993)<br>
+Luminosity0								- The burst luminosity in photons/cm2/s<br>
+alpha									- The low energy power-law slope of the Band function
+beta									- The high energy power-law slope of the Band function
+Tmax_Source								- The time of the pulse peak
 
 **Optional Arguments**
 Time 									- An array containing the time axis data
